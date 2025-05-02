@@ -18,7 +18,6 @@ class listDemo extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // --- MAP FUNCTION used here ---
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             padding: EdgeInsets.all(8),
@@ -36,12 +35,9 @@ class listDemo extends StatelessWidget {
               }).toList(),
             ),
           ),
-
-          // --- LISTVIEW (scrollable container) ---
           Expanded(
             child: ListView(
               children: [
-                // --- LISTVIEW.BUILDER for items ---
                 ListView.builder(
                   shrinkWrap: true,
                   physics: NeverScrollableScrollPhysics(),
@@ -54,8 +50,6 @@ class listDemo extends StatelessWidget {
                     );
                   },
                 ),
-
-                // --- GRIDVIEW.BUILDER for gridItems ---
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: GridView.builder(
